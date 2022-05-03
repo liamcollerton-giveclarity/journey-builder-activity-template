@@ -52,6 +52,8 @@ define([
             payload = data;
         }
         
+        document.getElementById('configuration').value = JSON.stringify(data, null, 2);
+
         var hasInArguments = Boolean(
             payload['arguments'] &&
             payload['arguments'].execute &&
