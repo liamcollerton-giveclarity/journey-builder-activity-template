@@ -64,7 +64,10 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [],
+              "inArguments":[
+                {"contactKey": "{{Contact.Key}}"},
+                {"Email": "{{Contact.Attribute.LC_ENTRY_DE.Email}}"}
+              ],
                 "outArguments": []
             }
         }
