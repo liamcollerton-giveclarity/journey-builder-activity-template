@@ -89,8 +89,8 @@ define([
     }
 
     function save() {
-        var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
+ //       var postcardURLValue = $('#postcard-url').val();
+  //      var postcardTextValue = $('#postcard-text').val();
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens
@@ -98,9 +98,10 @@ define([
         
         payload['metaData'].isConfigured = true;
 
-    //    var configuration = JSON.parse(document.getElementById('configuration').value);
+        var configuration = JSON.parse(document.getElementById('configuration').value);
 
         console.log(payload);
+        console.log(configuration);
         connection.trigger('updateActivity', payload);
     }
 
