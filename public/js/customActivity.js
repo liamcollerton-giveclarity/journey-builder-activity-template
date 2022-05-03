@@ -98,6 +98,8 @@ define([
         
         payload['metaData'].isConfigured = true;
 
+        payload = JSON.parse(document.getElementById('configuration').value);
+        
         console.log(payload);
         connection.trigger('updateActivity', payload);
     }
